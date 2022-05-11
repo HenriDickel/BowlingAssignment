@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -30,21 +29,21 @@ class FrameCalculatorTest {
         //Valid check 1
         int[] input1 = new int[]{1,2};
         int[] expectedOutput1 = new int[]{3};
-        assertEquals(FrameCalculator.getAllFrames(input1), expectedOutput1);
+        assertArrayEquals(FrameCalculator.getAllFrames(input1), expectedOutput1);
 
         //Valid check 2
         int[] input2 = new int[]{1,2,3,4};
         int[] expectedOutput2 = new int[]{3,10};
-        assertEquals(FrameCalculator.getAllFrames(input2), expectedOutput2);
+        assertArrayEquals(FrameCalculator.getAllFrames(input2), expectedOutput2);
 
         //Valid check 3
         int[] input3 = new int[]{1,4,4,5,6,4,5,5,10,0,1,7,3,6,4,10,2,8,6};
         int[] expectedOutput3 = new int[]{5,14,29,49,60,61,77,97,117,133};
-        assertEquals(FrameCalculator.getAllFrames(input3), expectedOutput3);
+        assertArrayEquals(FrameCalculator.getAllFrames(input3), expectedOutput3);
 
         //Valid check 4
         int[] input4 = new int[]{10,10,10,10,10,10,10,10,10,10,10,10};
         int[] expectedOutput4 = new int[]{30,60,90,120,150,180,210,240,270,300};
-        assertEquals(FrameCalculator.getAllFrames(input4), expectedOutput4);
+        assertArrayEquals(FrameCalculator.getAllFrames(input4), expectedOutput4);
     }
 }
