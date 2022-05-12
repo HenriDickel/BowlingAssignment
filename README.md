@@ -1,6 +1,6 @@
 # Bowling Assignment
 
-![](Screenshots/Capture.png)
+![Screenshot](Screenshots/Capture.PNG)
 
 ## Main Algorithm
 
