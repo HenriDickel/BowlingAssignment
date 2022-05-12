@@ -1,3 +1,5 @@
+package Logic;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,17 +33,16 @@ public class FrameCalculator {
                     if(scores.length > i + 2){
                         frames.add(10 + scores[i+1] + scores[i+2]);
                         if(frames.size() > 1) frames.set(frames.size() - 1, frames.get(frames.size() - 1) + frames.get(frames.size() - 2));
+                        if(frames.size() == 10) break;  //Last frame
                         continue;
                     }
                     else break;
                 }
 
-                //Start of frame and no strike, we can't calculate frame from here
+                //Start of frame and no strike - we can't calculate frame from here
                 if(startOfFrame){
-                    //Now not at the start anymore
-                    startOfFrame = false;
-
                     //Check next number
+                    startOfFrame = false;
                     continue;
                 }
                 else startOfFrame = true; //Set to true for next number
@@ -52,7 +53,6 @@ public class FrameCalculator {
                     if(scores.length > i + 1){
                         frames.add(10 + scores[i+1]);
                         if(frames.size() > 1) frames.set(frames.size() - 1, frames.get(frames.size() - 1) + frames.get(frames.size() - 2));
-                        continue;
                     }
                     else break;
                 }
