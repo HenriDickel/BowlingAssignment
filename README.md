@@ -11,7 +11,7 @@ int[] getAllFrames(int[] scores)
 ```
 
 This way, I was able to create test cases that would then serve as benchmarks for the quality of the algorithm. I chose JUnit tests here because they provide a simple and easy way to test the logical parts of the software: 
-[Tests](BowlingAssignmentJava\src\test\java\FrameCalculatorTest.java)
+[Tests](BowlingAssignmentJava/src/test/java/FrameCalculatorTest.java)
 
 Next, I thought about the algorithm itself. To do this, I looked at the definition and some examples to find information like this: 
 
@@ -21,12 +21,12 @@ Next, I thought about the algorithm itself. To do this, I looked at the definiti
 - The last frame is different from the others
   
 I came to the conclusion to form a loop over all inputs. In this loop I then distinguished between strikes, spares and normal throws. All that was left was to look for error cases and make sure that all the required points are given before calculating the frame points.
-[Algorithm](BowlingAssignmentJava\src\main\java\Logic\FrameCalculator.java)
+[Algorithm](BowlingAssignmentJava/src/main/java/Logic/FrameCalculator.java)
 
 ## Graphical User Interface
 
 After I finished developing the algorithm, I wanted to add a graphical user interface. I didn't want to overdo it, so I decided to use only one Java Swing form.  
-The basic idea was to recalculate the frames every time a new input is added and reload the user interface afterwards. [GUI Controller](BowlingAssignmentJava\src\main\java\MainGUI.java)
+The basic idea was to recalculate the frames every time a new input is added and reload the user interface afterwards. [GUI Controller](BowlingAssignmentJava/src/main/java/MainGUI.java)
 
 ## Improving the Algorithm
 
@@ -47,7 +47,7 @@ private boolean isStrike;
 private boolean isSpare;
 ```
 
-I would then create a copy of the algorithm that not only calculates frame scores, but also stores all input values and state information in the frame objects. [Algorithm used for GUI](BowlingAssignmentJava\src\main\java\Logic\GUIFrameCalculator.java)  
+I would then create a copy of the algorithm that not only calculates frame scores, but also stores all input values and state information in the frame objects. [Algorithm used for GUI](BowlingAssignmentJava/src/main/java/Logic/GUIFrameCalculator.java)  
 
 ## Rendering the UI
 
